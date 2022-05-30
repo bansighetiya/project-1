@@ -11,30 +11,30 @@ function App() {
 
   // console.log(person.name, person.age);
 
-  const person = [
-    {
-      name: "Amit",
-      age: 25,
-    },
-    {
-      name: "Piyush",
-      age: 40,
-    },
-  ];
+  // const person = [
+  //   {
+  //     name: "Amit",
+  //     age: 25,
+  //   },
+  //   {
+  //     name: "Piyush",
+  //     age: 40,
+  //   },
+  // ];
 
-  person.map((p) => console.log(p.name, p.age));
+  // person.map((p) => console.log(p.name, p.age));
 
-  // const person = {
-  //   name: "Amit",
-  //   age: 25,
-  //   course: [
-  //     "C",
-  //     "HTML"
-  //   ]
-  // }
+  const person = {
+    name: "Amit",
+    age: 25,
+    course: [
+      "C",
+      "HTML"
+    ]
+  }
 
-  // console.log(person.name, person.age);
-  // person.course.map((p) => console.log(p));
+  console.log(person.name, person.age);
+  person.course.map((p) => console.log(p));
 
   // const person = [
   //   {
