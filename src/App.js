@@ -3,86 +3,79 @@ import './App.css';
 import Demo from './component/Demo';
 
 function App() {
-
-  // const person = {
-  //   name: "Amit",
-  //   age: 25
-  // }
-
-  // console.log(person.name, person.age);
-
-  // const person = [
-  //   {
-  //     name: "Amit",
-  //     age: 25,
-  //   },
-  //   {
-  //     name: "Piyush",
-  //     age: 40,
-  //   },
-  // ];
-
-  // person.map((p) => console.log(p.name, p.age));
-
-  // const person = {
-  //   name: "Amit",
-  //   age: 25,
-  //   course: [
-  //     "C",
-  //     "HTML"
-  //   ]
-  // }
-
-  // console.log(person.name, person.age);
-  // person.course.map((p) => console.log(p));
-
-  // const person = [
-  //   {
-  //     name: "Amit",
-  //     age: 25,
-  //     course: [
-  //       "C",
-  //       "HTML"
-  //     ]
-  //   },
-  //   {
-  //     name: "Ajay",
-  //     age: 40,
-  //     course: [
-  //       "Java",
-  //       "JavaScript"
-  //     ]
-  //   }
-  // ]
-
-  // person.map((p) => {
-  //   console.log(p.name, p.age);
-  //   p.course.map((p) => console.log(p));
-  // })
-
-  const myObj = {
-    name: "John",
-    age: 30,
-    cars: {
-      car1: "Ford",
-      car2: "BMW",
-      car3: "Fiat"
-    }
-  }
-
-  for (let k in myObj) {
-    if (k === 'cars') {
-      for (let j in myObj[k]) {
-        console.log(myObj[k][j]);
+  let data =
+    [
+      {
+        id: 101,
+        name: 'Abacavir',
+        quantity: 25,
+        price: 150,
+        expiry: 2022,
+        status: true
+      },
+      {
+        id: 102,
+        name: 'Eltrombopag',
+        quantity: 90,
+        price: 550,
+        expiry: 2021,
+        status: true
+      },
+      {
+        id: 103,
+        name: 'Meloxicam',
+        quantity: 85,
+        price: 450,
+        expiry: 2025,
+        status: false
+      },
+      {
+        id: 104,
+        name: 'Allopurinol',
+        quantity: 50,
+        price: 600,
+        expiry: 2023,
+        status: true
+      },
+      {
+        id: 105,
+        name: 'Phenytoin',
+        quantity: 63,
+        price: 250,
+        expiry: 2021,
+        status: false
       }
-    } else {
-      console.log(myObj[k]);
-    }
-  }
+    ];
+  
 
   return (
-    <Demo />
+    <div>
+      <table border ="1">
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Idexpiry</th>
+              <th>Status</th>
+          </tr>
+          {
+            data.map((d,i) => {
+                return(
+                  <tr>
+                    <td>{d.id}</td>
+                    <td>{d.name}</td>
+                    <td>{d.quantity}</td>
+                    <td>{d.price}</td>
+                    <td>{d.expiry}</td>
+                    <td>{d.status.toString()}</td>
+                  </tr>
+                )
+            })
+          }
+      </table>
+    </div>
   );
-}
+ }
 
 export default App;
