@@ -9,8 +9,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <City />
-                <Cityfun />
+                {/* <City />
+                <Cityfun /> */}
                 <Country />
                 <Countryfun />
             </div>
