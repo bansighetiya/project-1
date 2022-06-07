@@ -4,6 +4,7 @@ import Cityfun from './Containers/Cityfun';
 import Country from './Containers/Country';
 import Countryfun from './Containers/Countryfun';
 import Time from './Containers/Time/Time';
+import Timefun from './Containers/Time/Timefun';
 
 
 
@@ -16,6 +17,7 @@ class App extends Component {
                 <Cityfun /> */}
                 {/* <Country />
                 <Countryfun /> */}
+                <Timefun />
             </div>
         );
     }
